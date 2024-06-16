@@ -1,0 +1,46 @@
+﻿<!-- <ResourceDictionary Source="Styles.xaml" /> -->
+
+<Window x:Class="ToDoListApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Lista de Tareas" Height="400" Width="600">
+
+         <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        <ListBox Name="taskListBox" Margin="10">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Titulo}" FontWeight="Bold" />
+                        <TextBlock Text="{Binding Descripcion}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <StackPanel Grid.Row="1" Margin="10" Orientation="Horizontal">
+            <Grid>
+                <TextBox Name="titleTextBox" Width="100" Margin="5" VerticalAlignment="Center" LostFocus="TitleTextBox_LostFocus" GotFocus="TitleTextBox_GotFocus"/>
+                <TextBlock Name="titlePlaceholder" Text="Título" Margin="5" VerticalAlignment="Center" Foreground="Gray" IsHitTestVisible="False" />
+            </Grid>
+            <Grid>
+                <TextBox Name="descriptionTextBox" Width="200" Margin="5" VerticalAlignment="Center" LostFocus="DescriptionTextBox_LostFocus" GotFocus="DescriptionTextBox_GotFocus"/>
+                <TextBlock Name="descriptionPlaceholder" Text="Descripción" Margin="5" VerticalAlignment="Center" Foreground="Gray" IsHitTestVisible="False" />
+            </Grid>
+            <Button Content="Agregar" Width="75" Margin="5" Click="AddTask_Click" />
+            <Button Content="Eliminar" Width="75" Margin="5" Click="DeleteTask_Click" />
+            <Button Content="Guardar" Width="75" Margin="5" Click="SaveTasks_Click" />
+        </StackPanel>
+    </Grid>
+</Window>

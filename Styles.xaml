@@ -1,0 +1,64 @@
+<!-- Styles.xaml -->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Estilos para TextBox -->
+    <Style TargetType="TextBox">
+        <Setter Property="Margin" Value="5" />
+        <Setter Property="Padding" Value="5" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="BorderBrush" Value="#FFC3A0" /> <!-- Rosa bajito para el borde -->
+        <Setter Property="BorderThickness" Value="2" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="Background" Value="#FFD3DC" /> <!-- Rosa más claro para el fondo -->
+    </Style>
+
+    <!-- Estilos para TextBlock -->
+    <Style TargetType="TextBlock">
+        <Setter Property="Foreground" Value="#5C5C5C" /> <!-- Gris más claro -->
+        <Setter Property="FontSize" Value="14" />
+    </Style>
+
+    <!-- Estilos para Button -->
+    <Style TargetType="Button">
+        <Setter Property="Margin" Value="5" />
+        <Setter Property="Padding" Value="10" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="Background" Value="#FFC3A0" /> <!-- Rosa bajito -->
+        <Setter Property="BorderBrush" Value="#FFC3A0" />
+        <Setter Property="BorderThickness" Value="2" />
+        <Setter Property="Cursor" Value="Hand" />
+    </Style>
+
+    <!-- Estilos para ListBox -->
+    <Style TargetType="ListBox">
+        <Setter Property="Margin" Value="10" />
+        <Setter Property="Padding" Value="5" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="BorderBrush" Value="#2980B9" />
+        <Setter Property="BorderThickness" Value="2" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="Background" Value="#FFD3DC" /> <!-- Rosa más claro -->
+    </Style>
+
+    <!-- Estilos para ListBoxItem -->
+    <Style TargetType="ListBoxItem">
+        <Setter Property="Padding" Value="10" />
+        <Setter Property="Margin" Value="5" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="Background" Value="#63A4FF" /> <!-- Azulito -->
+        <Setter Property="BorderBrush" Value="Transparent" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="Background" Value="#2980B9" />
+                <Setter Property="BorderBrush" Value="#2980B9" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>
